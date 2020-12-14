@@ -17,7 +17,7 @@
 #                           Variables in python
 # -----------------------------------------------------------------------------
 iq = 33
-# cariables should be snake case
+# variables should be snake case
 # assinging a variable is also called binding
 # best practices
 # snake_case

@@ -1,6 +1,6 @@
-# text = input('what is this? \n')
+text = input('what is this? \n')
 
-# print('this is not ' + text)
+print('this is not ' + text)
 
 # print(type(3))
 
@@ -14,8 +14,12 @@
 
 # print(f'You are {age} years old')
 
-user_name = input('Please enter your name: ')
-password = input('Please create a password: ')
-hidden = '*' * len(password)
+# user_name = input('Please enter your name: ')
+# password = input('Please create a password: ')
+# hidden = '*' * len(password)
 
-print(f'{user_name} your password {hidden} is {len(password)} letters long.')
+# print(f'{user_name} your password {hidden} is {len(password)} letters long.')
+
+print(
+    'Xolo unazingua'
+)
