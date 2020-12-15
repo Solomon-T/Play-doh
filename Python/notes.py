@@ -38,7 +38,6 @@
 
 
 # -----------------------------------------------------------------------------
-
 #                           Variables in python
 # -----------------------------------------------------------------------------
 iq = 33
@@ -142,6 +141,9 @@ print('Yoo! {new_name} you got {new_score}'.format(
 # must know funtions 
 # str(), int(), abs, round,   print(), len(), replace
 
+# join
+new_sentence = ' '.join(['hi', 'you', '!'])
+
 quote = 'to cry or not to cry'
 quote = quote.replace('cry', 'be')
 
@@ -156,4 +158,44 @@ print(quote)
 #                               Boolean
 # -----------------------------------------------------------------------------
 # True, False
+# -----------------------------------------------------------------------------
+
+
+# -----------------------------------------------------------------------------
+#                               Lists
+# -----------------------------------------------------------------------------
+# the first DS we are learning and they are just an array
+# well see the difference with arrays later on
+
+# myList[i] throws an error if out of range
+
+# list slicing is also a thing. same as in strings
+    # list slicing doesnt mutate the list but creates a new list
+my_list = [1,2,3,4]
+my_list[0] = 99
+new_list = my_list[:]
+# new_list = my_list
+new_list[0] = 100
+print(new_list)
+print(my_list)
+# are mutable - we can replace at it
+
+# list methods 
+    # append - you cant do this new_list = old_list.append(33)
+    # insert - also modifies the list in place
+    # extend - same thing but takes in a list
+    # pop - can take index to remove is not given removes from the end
+    # remove - takes the value you want to remove 
+    # clear - removes everything in the list
+    # index - takes in an arg and returns the index where it is found, can take start and end
+    # just use in instead of index - value in list - returns boolean value
+    # count - counts how many times a value exits in a list
+    # sort - vs the function sorted(list) - sorted doest modify the list
+    # copy - same as list[:]
+    # reverse - not the same as list[::-1], reverse modifies the list
+
+# range - myList = list(range(1,4)) or list(range(5))
+
+# list upacking
+a, b, c, *other, d = [1,2,3,4,5,6]  
 # -----------------------------------------------------------------------------
