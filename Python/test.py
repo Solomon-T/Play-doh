@@ -1,6 +1,3 @@
-text = input('what is this? \n')
-
-print('this is not ' + text)
 
 # print(type(3))
 
@@ -24,18 +21,17 @@ print('this is not ' + text)
 #     'Xolo unazingua'
 # )
 
-is_magician = False
-is_expert = True
+# is_magician = False
+# is_expert = True
 
-if is_magician and is_expert:
-    print('You are a master magician')
-elif is_magician and not is_expert:
-    print('at least you\'re getting there' )
-else:
-    print('You need professional help')
+# if is_magician and is_expert:
+#     print('You are a master magician')
+# elif is_magician and not is_expert:
+#     print('at least you\'re getting there' )
+# else:
+#     print('You need professional help')
 
-False
-False
-False
-False
-False
+
+for i, num in enumerate(list(range(199))):
+    print(i) if num == 50 else 1+1
+
