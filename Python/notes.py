@@ -8,9 +8,10 @@
 # actions - built in functions such as math functions like round(3.5)..
 # best practices - 
 
-    # Deceloper fundamentsl
+    # Developer fundamentals
 # dont memorize the dictionary ie. the docs. use it as you go.
 # proper comments. https://realpython.com/python-comments-guide/
+# understand DS - when to use which
 
     # Functions vs Methods
 # Methods belong to a class while functions dont. Methods use .function
@@ -199,3 +200,55 @@ print(my_list)
 # list upacking
 a, b, c, *other, d = [1,2,3,4,5,6]  
 # -----------------------------------------------------------------------------
+
+
+# -----------------------------------------------------------------------------
+#                           Dictionary(Dict)
+# -----------------------------------------------------------------------------
+# Our second DS
+# if key doesnt exist throws an error. 
+    # use get intead
+    # key in myDict 
+        # this checks both keys and values
+        # key in user.keys() 
+# also remember it is unordered
+# a key can be anything thats immutable eg, string, int, boolean, tuple 
+# a key overides the value is repeated
+
+# you can creat by new_dict = dict(word= 'meaning')
+
+# dict methods
+    # keys
+    # values
+    # items - gives a touple
+    # clear - doesnt return anything does it in place
+    # copy
+    # pop(key)
+    # popItem - just removes a random value
+    # update({'key': 4}) - takes in a key value pair
+# -----------------------------------------------------------------------------
+
+
+# -----------------------------------------------------------------------------
+#                               Tuple
+# -----------------------------------------------------------------------------
+# are like lists but immutable 
+# use brackets instead of square brackets
+# if you dont need a list to change always need a touple
+
+# you can use slicing to create new touples 
+my_tuple = (1,2,3,4,5)
+new_tuple = my_tuple[1:4]
+
+q, w, g, *other2, z = (1, 2, 3, 4, 5, 6)
+
+# methods
+    # count
+    # index
+
+# we alse have len(my_touple)
+
+# -----------------------------------------------------------------------------
+
+
+
