@@ -20,6 +20,22 @@ print('this is not ' + text)
 
 # print(f'{user_name} your password {hidden} is {len(password)} letters long.')
 
-print(
-    'Xolo unazingua'
-)
+# print(
+#     'Xolo unazingua'
+# )
+
+is_magician = False
+is_expert = True
+
+if is_magician and is_expert:
+    print('You are a master magician')
+elif is_magician and not is_expert:
+    print('at least you\'re getting there' )
+else:
+    print('You need professional help')
+
+False
+False
+False
+False
+False
