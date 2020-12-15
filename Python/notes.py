@@ -251,4 +251,28 @@ q, w, g, *other2, z = (1, 2, 3, 4, 5, 6)
 # -----------------------------------------------------------------------------
 
 
+# -----------------------------------------------------------------------------
+#                               Sets
+# -----------------------------------------------------------------------------
+# created using {}
+set_list = set(my_list)
+my_set = {1, 3, 4, 5, 6, 7, 7}
+my_set.add(44)
 
+# does not support indexing
+print(1 in my_set)
+
+# methods
+# copy
+# clear
+# difference - set_1.difference(set_2)
+# discard - removes the value
+# difference_update - removes all elements of another set from this set
+# intersection -
+# also set_1 & set_2
+# isdisjoint -
+# union - unites the sets
+# also set_1 | set_2
+# issubset() -
+# issuperset() -
+# -----------------------------------------------------------------------------
