@@ -47,3 +47,27 @@ for _ in another_range:
     # enumerate - gives you an index counter over an iterable
 for idx, item in enumerate('hello'):
     print(idx, item)
+
+
+# while loops
+i = 0
+# while i < 2:
+#     print(i)
+#     i += 1
+
+# # while else
+# while 1 < 0:
+#     pass
+# else:
+#     pass
+
+while True:
+    response = input('How is your day today? \n')
+
+    if response == 'Great!':
+        break
+
+    print(f'Only {response}? lets do this again!')
+
+# break and continue works as normal
+# pass is a do nothing instruction. A code block needs to do something so pass 
