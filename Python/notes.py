@@ -16,6 +16,7 @@
 # readability
 # predictability
 # DRY
+# Test your assumptions
 
 
     # Functions vs Methods

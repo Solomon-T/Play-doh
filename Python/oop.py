@@ -4,6 +4,9 @@
 # note you dont pass in the self as you are instanciating an instance
 # we can add attributes outside the class deffinition
 
+# Note the difference btn objects and dictionaries to access atrributes
+    # for an object we use the dot notation 
+    # for a dictionary you use square brackets
 
 class PlayerCharacter:
     # Class Object Attribute, exists for all instances and cant be changed
@@ -43,3 +46,9 @@ print(player1.super_powers)
 
 # help gives you the blue print of an object
 print(player2.shout())
+
+
+
+# 4 PILLARS OF OOP
+    # Encapsulation - is the binding of data and funtions that munipulate it
+    # Abstraction - hidding info and giving access only whats needed
