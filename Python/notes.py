@@ -12,6 +12,11 @@
 # dont memorize the dictionary ie. the docs. use it as you go.
 # proper comments. https://realpython.com/python-comments-guide/
 # understand DS - when to use which
+# clean
+# readability
+# predictability
+# DRY
+
 
     # Functions vs Methods
 # Methods belong to a class while functions dont. Methods use .function
@@ -194,6 +199,10 @@ print(my_list)
     # sort - vs the function sorted(list) - sorted doest modify the list
     # copy - same as list[:]
     # reverse - not the same as list[::-1], reverse modifies the list
+
+    # sum
+    # max
+    
 
 # range - myList = list(range(1,4)) or list(range(5))
 

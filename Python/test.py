@@ -1,2 +1,5 @@
-some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
+a = 'abcdefghij'
 
+while ((n := len(a)) > 0):
+    print(a)
+    a = a[:-1]
