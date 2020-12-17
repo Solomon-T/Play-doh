@@ -39,7 +39,35 @@ def accumutator(acc, item):
 
 print(reduce(accumutator,list(my_list),0))
 
+
+
 # Lambda expressions
     # onetime anonymos fuctions that you dont need more than once
 
 print('from Lamda funtions => ',list(map(lambda item: item*2, my_list)))
+
+
+
+# Comprehensions: list, set, dictionary
+    # they are a quick way to create a list, set or dict without looping
+
+    # instead of 
+looped_list = []
+for char in 'hello':
+    looped_list.append(char)
+
+comp_list = [char for char in 'hello']
+print(comp_list)
+print([num * 2 for num in range(0,6)])
+print([num ** 2 for num in range(0, 21) if num % 2 == 0])
+
+    # for sets just use curly branckets
+comp_set = {char for char in 'hello'}
+print(comp_set)
+print({num * 2 for num in range(0, 6)})
+print({num ** 2 for num in range(0, 21) if num % 2 == 0})
+
+    # for dict
+simple_dict = { 'a': 1, 'b': 2, 'c': 3}
+print({key:value**2 for key, value in simple_dict.items()})
+print({value:value**2 for value in [3,4,5]})
