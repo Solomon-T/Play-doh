@@ -36,3 +36,8 @@ print(f"The oldest cat is {find_oldest(cat1,cat2,cat3)} years old.")
 print(
     f"The oldest cat is {get_oldest_cat(cat1.age, cat2.age, cat3.age) } years old.")
 
+a = [(0, 2), (4, 3), (9, 9), (10, -1)]
+
+print(sorted(a, key=lambda item: item[1])) # note: sorted returns a new list
+
+print(a.sort(key=lambda item: item[1])) # note:sort modifies a and returns none.

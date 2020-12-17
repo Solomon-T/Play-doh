@@ -1,14 +1,7 @@
-class SuperList(list):
-    def __len__(self):
-        return 1000
+my_list = [5,4,3]
 
-super_list = SuperList()
-print(super_list)
-print(len(super_list))
-print('-----------------')
-super_list.append('abc')
-super_list.append('ksa;')
-print(super_list)
-print(len(super_list))
+print(list(map(lambda num: num*num, my_list)))
 
+a = [(0,2), (4,3), (9, 9), (10, -1)]
 
+print(sorted(a, key= lambda item: item[1]))

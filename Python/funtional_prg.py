@@ -38,3 +38,8 @@ def accumutator(acc, item):
     return acc + item
 
 print(reduce(accumutator,list(my_list),0))
+
+# Lambda expressions
+    # onetime anonymos fuctions that you dont need more than once
+
+print('from Lamda funtions => ',list(map(lambda item: item*2, my_list)))
