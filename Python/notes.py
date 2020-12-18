@@ -17,6 +17,9 @@
 # predictability
 # DRY
 # Test your assumptions
+# know the pros and cons of libraries - know you are adding more code
+# get better at debbuging - watch section 12
+
 
 
     # Functions vs Methods
