@@ -1,0 +1,24 @@
+    Following docs
+Create an env
+- mkdir projectX
+- cd projectX
+- python3 -m venv server
+
+Activate the env - you need to activate to get into your virutal env?
+- . venv/bin/activate
+
+Install Flask
+$ pip install Flask
+
+To run the app
+- you have to activate the env in order to run the app
+    - be careful with the location in which you are doing the activation 
+- export the Flask_App env varible
+    - export FLASK_APP=server.py
+    - your current directory may affect the way you find the server.py
+- run the app
+    - flask run
+
+
+* When in developnent mode, changes to the API are not reflected. 
+* only changes to the html is 
