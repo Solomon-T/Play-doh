@@ -39,12 +39,18 @@ def write_to_file(data):
 def submit_form():
     # print(boody)
     if request.method == 'POST':
-        data = request.form.to_dict()
-        write_to_csv(data)
-        # write_to_file(data)
-        print(data)
+        try:
+            data = request.form.to_dict()
+            write_to_csv(data)
+            # write_to_file(data)
+            print(data)
+        except:
+            return "Sorry! Did not save to database"
+        else:
+            return 'Something went wrong please try again!'
+    
     return redirect('thankyou.html')
-
+ 
 # @app.route('/index.html')
 # def index():
 #     return render_template('index.html')
