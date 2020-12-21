@@ -1,4 +1,6 @@
 from flask import Flask, render_template, request, redirect
+import csv
+
 app = Flask(__name__)
 
 
@@ -12,9 +14,21 @@ def home():
 def html_page(page_name):
     return render_template(page_name)
 
+# CSV actually stands for comma separated values
+
+
+def write_to_csv(data):
+    with open('./databese.csv', mode='a') as database2:
+        email = data['email']
+        subject = data['subject']
+        message = data['message']
+        csv_writter = csv.writer(
+            database2, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+        csv_writter.writerow([email, subject, message])
+
 
 def write_to_file(data):
-    with open('databese.text', mode='a') as database:
+    with open('databese.text',newline='', mode='a') as database:
         email = data['email']
         subject = data['subject']
         message = data['message']
@@ -26,7 +40,8 @@ def submit_form():
     # print(boody)
     if request.method == 'POST':
         data = request.form.to_dict()
-        write_to_file(data)
+        write_to_csv(data)
+        # write_to_file(data)
         print(data)
     return redirect('thankyou.html')
 
