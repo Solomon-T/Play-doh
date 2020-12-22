@@ -1,0 +1,4 @@
+how to use Tachyons
+- install tachyons in project root
+- import 'tackyons' in component that you want to use classes
+- search and add class names
