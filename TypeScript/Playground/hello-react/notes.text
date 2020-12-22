@@ -2,3 +2,12 @@ how to use Tachyons
 - install tachyons in project root
 - import 'tackyons' in component that you want to use classes
 - search and add class names
+
+You can export a const from a file just like a funtion
+- look at how we used robot.js 
+
+Note: on imports that arent default you have to destructure
+
+Rendering a list
+- if you give react a list of components
+- it is smart enough to know how to deal with it
