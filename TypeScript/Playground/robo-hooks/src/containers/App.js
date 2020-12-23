@@ -1,23 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import CardList from '../component/CardList'
-// import { robots } from '../robots'
+import { classMates } from '../robots'
 import SearchBox from '../component/SearchBox'
 import Scroll from '../component/Scroll'
 import './App.css'
 
 // always add an empty array to useEffect for it to act as component did mount
 function App() {
-    const [counts, setCounts] = useState(1)
-    const [robots, setRobots] = useState([])
+    const robots = classMates
+    // const [counts, setCounts] = useState(1)
+    // const [robots, setRobots] = useState([])
     const [searchfield, setSearchfield] = useState('')
 
-    useEffect(() => {
-        console.log(counts, ' render')
-        setCounts( counts + 1 )
-        fetch('https://jsonplaceholder.typicode.com/users')
-            .then(response => response.json())
-            .then(users => setRobots(users))
-    },[]);
+    // useEffect(() => {
+    //     console.log(counts, ' render')
+    //     setCounts( counts + 1 )
+    //     fetch('https://jsonplaceholder.typicode.com/users')
+    //         .then(response => response.json())
+    //         .then(users => setRobots(users))
+    // },[]);
 
     const onSearchChange = (event) => {
         setSearchfield(event.target.value)

@@ -6,8 +6,34 @@ how to use Tachyons
 You can export a const from a file just like a funtion
 - look at how we used robot.js 
 
-Note: on imports that arent default you have to destructure
+* Note: on imports that arent default you have to destructure
 
 Rendering a list
 - if you give react a list of components
 - it is smart enough to know how to deal with it
+
+Remember to always bind the funtions
+- you can bind them in the constructor
+- or by using a fat arrow 
+
+* Note: Inside a class you just ftart a funtion by the name, no cont no funtion
+
+Life cycle methods
+- goes like this
+- constuructor , render, componentDidMount, render
+
+Children
+- You can access the children by props.children 
+- Automatically every single component in react has this property
+
+Destructure the state
+- const { robots, searchfield } = this.state;
+- This destructuring eliminates the need to use this.state
+
+Build: this is recuired to build the code necessary for production
+- It minifies all your code
+- look at your package.json file youll see it under scripts
+
+* Hooks
+- The number one thing to know is to add an empty array as a second argument
+- in useEffect on order to use it as component did mount 
