@@ -11,12 +11,17 @@ class App extends Component{
             robots: [],
             searchfield: ''
         }
-        console.log('constructor')
+        // console.log('constructor')
     }
 
     componentDidMount() {
-        this.setState({robots: robots})
-        console.log('componentDidMount')
+        // this.setState({robots: robots})
+        // console.log('componentDidMount')
+        // note fetch is part of the window object
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(response => response.json())
+            .then(users => this.setState({robots: users}))
+
     }
 
     onSearchChange = (event) => {
@@ -27,7 +32,7 @@ class App extends Component{
         const filteredRobots = this.state.robots.filter( robot => (
             robot.name.toLocaleLowerCase().includes(this.state.searchfield.toLocaleLowerCase())
         ))
-        console.log('render')
+        // console.log('render')
         return(
             <div className='tc'>
                 <h1 className='f2'>Robo dudes</h1>
