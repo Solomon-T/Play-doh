@@ -33,6 +33,9 @@ class App extends Component{
             robot.name.toLocaleLowerCase().includes(this.state.searchfield.toLocaleLowerCase())
         ))
         // console.log('render')
+        if(this.state.robots.length === 0){
+            return <h1 className='f1'> Loading </h1>
+        }
         return(
             <div className='tc'>
                 <h1 className='f2'>Robo dudes</h1>
