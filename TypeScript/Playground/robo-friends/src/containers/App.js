@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import CardList from './CardList'
-import { robots } from './robots'
-import SearchBox from './SearchBox'
-import Scroll from './Scroll'
+import CardList from '../component/CardList'
+// import { robots } from '../robots'
+import SearchBox from '../component/SearchBox'
+import Scroll from '../component/Scroll'
 import './App.css'
 
 class App extends Component{
@@ -29,14 +29,16 @@ class App extends Component{
         this.setState({searchfield: event.target.value})
     }
 
-    render(){    
-        const filteredRobots = this.state.robots.filter( robot => (
-            robot.name.toLocaleLowerCase().includes(this.state.searchfield.toLocaleLowerCase())
+    render(){   
+        const { robots, searchfield } = this.state;
+        // Note this destructuring eliminates the need to use this.state
+        const filteredRobots = robots.filter( robot => (
+            robot.name.toLocaleLowerCase().includes(searchfield.toLocaleLowerCase())
         ))
         // console.log('render')
-        if(this.state.robots.length === 0){
-            return <h1 className='f1'> Loading </h1>
-        }
+
+        if(!robots.length) return <h1 className='f1'> Loading </h1>
+        
         return(
             <div className='tc'>
                 <h1 className='f2'>Robo dudes</h1>
