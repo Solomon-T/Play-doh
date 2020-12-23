@@ -6,19 +6,20 @@ import Scroll from '../component/Scroll'
 import './App.css'
 
 // always add an empty array to useEffect for it to act as component did mount
-function App() {
+function App(props) {
     const robots = classMates
     // const [counts, setCounts] = useState(1)
     // const [robots, setRobots] = useState([])
     const [searchfield, setSearchfield] = useState('')
 
-    // useEffect(() => {
-    //     console.log(counts, ' render')
+    useEffect(() => {
+        console.log(props.store, 'component did mount')
+        // console.log(counts, ' render')
     //     setCounts( counts + 1 )
     //     fetch('https://jsonplaceholder.typicode.com/users')
     //         .then(response => response.json())
     //         .then(users => setRobots(users))
-    // },[]);
+    },[]);
 
     const onSearchChange = (event) => {
         setSearchfield(event.target.value)
