@@ -7,41 +7,32 @@ import SearchBox from '../component/SearchBox'
 import Scroll from '../component/Scroll'
 import './App.css'
 
-import { setSearchField } from '../actions'
+import { setSearchField, requestRobots } from '../actions'
 
 const mSP = state => {
     return {
-        searchField: state.searchField
-        // searchField: state.searchRobots.searchField
+        searchField: state.searchRobots.searchField,
+        isPending: state.requestRobots.isPending,
+        robots: state.requestRobots.robots,
+        error: state.requestRobots.error
     }
 }
 
 const mDP = dispatch => {
     return {
-        onSearchChange: (event) => dispatch(setSearchField(event.target.value))
+        onSearchChange: (event) => dispatch(setSearchField(event.target.value)),
+        onRequestRobots: () => dispatch(requestRobots())
     }
 }
 
 // always add an empty array to useEffect for it to act as component did mount
 function App(props) {
-    const robots = classMates
-    // const [counts, setCounts] = useState(1)
-    // const [robots, setRobots] = useState([])
-    // const [searchfield, setSearchfield] = useState('')
-    const { searchField, onSearchChange } = props
+    // const robots = classMates
+    const { searchField, onSearchChange, robots } = props
 
     useEffect(() => {
-        console.log(props.store, 'component did mount')
-        // console.log(counts, ' render')
-    //     setCounts( counts + 1 )
-    //     fetch('https://jsonplaceholder.typicode.com/users')
-    //         .then(response => response.json())
-    //         .then(users => setRobots(users))
+        props.onRequestRobots();
     },[]);
-
-    // const onSearchChange = (event) => {
-    //     setSearchfield(event.target.value)
-    // }
 
     const filteredRobots = robots.filter( robot => (
         robot.name.toLocaleLowerCase().includes(searchField.toLocaleLowerCase())
@@ -59,53 +50,5 @@ function App(props) {
         </div>
     )
 }
-
-
-
-// class App extends Component{
-//     constructor(){
-//         super()
-//         this.state = {
-//             robots: [],
-//             searchfield: ''
-//         }
-//         // console.log('constructor')
-//     }
-
-//     componentDidMount() {
-//         // this.setState({robots: robots})
-//         // console.log('componentDidMount')
-//         // note fetch is part of the window object
-//         fetch('https://jsonplaceholder.typicode.com/users')
-//             .then(response => response.json())
-//             .then(users => this.setState({robots: users}))
-
-//     }
-
-//     onSearchChange = (event) => {
-//         this.setState({searchfield: event.target.value})
-//     }
-
-//     render(){   
-//         const { robots, searchfield } = this.state;
-//         // Note this destructuring eliminates the need to use this.state
-//         const filteredRobots = robots.filter( robot => (
-//             robot.name.toLocaleLowerCase().includes(searchfield.toLocaleLowerCase())
-//         ))
-//         // console.log('render')
-
-//         if(!robots.length) return <h1 className='f1'> Loading </h1>
-        
-//         return(
-//             <div className='tc'>
-//                 <h1 className='f2'>Robo dudes</h1>
-//                 <SearchBox searchChange={this.onSearchChange}/>
-//                 <Scroll>
-//                     <CardList robots={filteredRobots}/>
-//                 </Scroll>
-//             </div>
-//         )
-//     }
-// }
 
 export default connect(mSP,mDP)(App);
