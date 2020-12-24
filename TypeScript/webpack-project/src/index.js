@@ -1,0 +1,1 @@
+console.log('webpack better than colling???')
