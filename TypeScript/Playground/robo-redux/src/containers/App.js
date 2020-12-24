@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import {connect} from 'react-redux';
 
 import CardList from '../component/CardList'
-import { classMates } from '../robots'
 import SearchBox from '../component/SearchBox'
 import Scroll from '../component/Scroll'
 import './App.css'
@@ -25,9 +24,7 @@ const mDP = dispatch => {
     }
 }
 
-// always add an empty array to useEffect for it to act as component did mount
 function App(props) {
-    // const robots = classMates
     const { searchField, onSearchChange, robots } = props
 
     useEffect(() => {
