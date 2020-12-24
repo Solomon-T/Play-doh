@@ -1,16 +1,34 @@
 import React, { useState, useEffect } from 'react';
+import {connect} from 'react-redux';
+
 import CardList from '../component/CardList'
 import { classMates } from '../robots'
 import SearchBox from '../component/SearchBox'
 import Scroll from '../component/Scroll'
 import './App.css'
 
+import { setSearchField } from '../actions'
+
+const mSP = state => {
+    return {
+        searchField: state.searchField
+        // searchField: state.searchRobots.searchField
+    }
+}
+
+const mDP = dispatch => {
+    return {
+        onSearchChange: (event) => dispatch(setSearchField(event.target.value))
+    }
+}
+
 // always add an empty array to useEffect for it to act as component did mount
 function App(props) {
     const robots = classMates
     // const [counts, setCounts] = useState(1)
     // const [robots, setRobots] = useState([])
-    const [searchfield, setSearchfield] = useState('')
+    // const [searchfield, setSearchfield] = useState('')
+    const { searchField, onSearchChange } = props
 
     useEffect(() => {
         console.log(props.store, 'component did mount')
@@ -21,12 +39,12 @@ function App(props) {
     //         .then(users => setRobots(users))
     },[]);
 
-    const onSearchChange = (event) => {
-        setSearchfield(event.target.value)
-    }
+    // const onSearchChange = (event) => {
+    //     setSearchfield(event.target.value)
+    // }
 
     const filteredRobots = robots.filter( robot => (
-        robot.name.toLocaleLowerCase().includes(searchfield.toLocaleLowerCase())
+        robot.name.toLocaleLowerCase().includes(searchField.toLocaleLowerCase())
     ))
 
     if(!robots.length) return <h1 className='f1'> Loading </h1>
@@ -90,4 +108,4 @@ function App(props) {
 //     }
 // }
 
-export default App;
+export default connect(mSP,mDP)(App);
